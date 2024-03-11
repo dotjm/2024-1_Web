@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>변수 선언</title>
+</head>
+<body>
+    <h3>변수 선언, 전역/지역/블록 변수</h3>
+    <hr>
+    <script>
+        let x; // 전역 변수 x 선언. var로 선언하여도 동일
+        function f() {
+            let y; // 함수 f() 내에서만 사용되는 지역 변수 y 선언, var로 선언해도 동일
+            x = 10; // 전역 변수 x에 10 저장
+            y = 20; // 지역변수 y에 20 저장
+            z = 30; // 새로운 전역 변수 z가 선언되고 30이 저장됨
+
+            if(y == 20) {
+                let b = 40;
+                b++;
+                document.write("if 블록 내 블록변수 b = " + b + "<br>");
+            }
+            
+        }
+    </script>
+</body>
+</html>
