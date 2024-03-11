@@ -1,0 +1,3 @@
+div { background-color: skyblue; }
+span { color: red; }
+p { background-color: black; color: red; font-size: 15px; } /* 모든 p 태그에 적용 */
