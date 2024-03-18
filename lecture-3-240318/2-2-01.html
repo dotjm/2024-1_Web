@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>리스트 수업</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>리스트 만들기</h1>
+    <hr>
+    <ol type="1" start="5">
+        이번주 일정 
+        <li>월 : 웹프 수업 있음</li>
+        <li>화 : 자료구조 수업 후 알바</li>
+        <li>수 : 공강. 친구와 약속</li>
+        <li>목 : 컴구</li>
+        <li>금 : 공강, MT 하루전</li>
+    </ol>
+    <ul type="disk">
+        이번주 일정 
+        <li>월 : 웹프 수업 있음ㄴ
+            <ol>
+                <li>9시 부터 </li>
+                <li>12시 점심 </li>
+            </ol>
+        </li>
+        <li>화 : 자료구조 수업 후 알바</li>
+        <li>수 : 공강. 친구와 약속</li>
+        <li>목 : 컴구</li>
+        <li>금 : 공강, MT 하루전</li>
+    </ul>
+    <dl>
+        <dt>용어</dt>
+        <dd>정의</dd>
+        <dt>사과</dt>
+        <dd>사과는 가을에서 겨울을 지나 초봄까지 먹을 수 있는 과일이다. </dd>
+    </dl>
+
+    <h1 id="make-list">테이블 만들기</h1>
+    <hr>
+
+    <table border="1">
+        <tr>
+            <td>이름</td>
+            <td>생년월일</td>
+            <td>전화번호</td>
+        </tr>
+        <tr>
+            <td>정지민</td>
+            <td>2000.00.00</td>
+            <td>010-1234-5678</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+        <tr>
+            <td>000</td>
+            <td>100</td>
+            <td>88</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>000</td>
+            <td>80</td>
+            <td>97</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>000</td>
+            <td>85</td>
+            <td>99</td>
+            <td>95</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>000</td>
+                <td>100</td>
+                <td>88</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>000</td>
+                <td>80</td>
+                <td>97</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>000</td>
+                <td>85</td>
+                <td>99</td>
+                <td>95</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>평균: </th>
+                <th>90</th>
+                <th>90</th>
+                <th>90</th>
+            </tr>
+        </tfoot>
+        <!-- thead - tbody - tfoot 순으로 자동 배열 (원래는 작성 순이지만, 이 태그로 순서 정하기 기능) -->
+        <!-- thead - tbody - tfoot 의 정의에 대해 잘 알아놓을 것 -->
+        <!-- td 태그 안에는 다양한 태그를 넣을 수 있다.  -->
+        <!-- colspan / rowspan -->        
+       
+    </table>
+
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td rowspan="2">2</td>
+            <td colspan="2">3</td>
+            <!-- <td>4</td> -->
+        </tr>
+        <tr>
+            <td>1</td>
+            <!-- <td>2</td> -->
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+
+    <table border="1">
+        <tr>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+        </tr>
+        <tr>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td colspan="2"></td>
+            <!-- <td> &nbsp; &nbsp; &nbsp; </td> -->
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+        </tr>
+        <tr>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+        </tr>
+        <tr>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td rowspan="2"></td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+        </tr>
+        <tr>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <!-- <td> &nbsp; &nbsp; &nbsp; </td> -->
+            <td> &nbsp; &nbsp; &nbsp; </td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <!-- <td> &nbsp; &nbsp; &nbsp; </td> -->
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+            <td> &nbsp; &nbsp; &nbsp; </td>
+        </tr>
+
+    </table>
+
+    <h1>하이퍼링크 만들기</h1>
+    <hr>
+    <a href="https://daum.net">다음사이트</a>
+    <a href="2-3-01.html">같은 폴더의 파일</a>
+    <br>
+    <a href="2-3-01.html"><img src="media/apple.jpg" width="100px" alt=""></a>
+    <br>
+    <a href="#make-list">리스트로 가기</a>
+</body>
+</html>
