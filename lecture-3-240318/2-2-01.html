@@ -3,6 +3,46 @@
 <head>
     <title>리스트 수업</title>
     <meta charset="UTF-8">
+    <style>
+        /* CSS 셀렉터 */
+        /* 
+        
+        태그명 : 그냥 작성
+        ID : #ID
+        Class : .Class명 -> 여러 태그에 다 적용
+        태그명.class명  : 특정 태그에 특정 클래스 인 경우만 적용
+        여러 조건에 동시 적용 -> ","로 구분
+        
+        자식 -> 바로 아래 ">"으로 선택
+        자손 -> 모든 하위. " " 이후 작성하여 선택
+        "*" : 전체 셀렉터
+
+        가상 클래스 셀렉터 : 액션( 조건, 상황 등)에따라 스타일 적용 ex) hover, first-letter etc...
+
+        */
+        table {
+            color: purple;
+            text-align: center;
+        }
+
+        #make-list {
+            color: violet;
+        }
+
+        .bg {
+            background-color: pink;
+        }
+
+        
+        /* body 태그 입장에서 짝수 번째인 p 태그 / 자손도 되는 듯 */
+        p:nth-child(even) {
+            color: red;
+        }
+
+        li:hover {
+            background-color: skyblue;
+        }
+    </style>
 </head>
 <body>
     <h1>리스트 만들기</h1>
@@ -147,7 +187,7 @@
 
 
     <table border="1">
-        <tr>
+        <tr class="bg">
             <td> &nbsp; &nbsp; &nbsp; </td>
             <td> &nbsp; &nbsp; &nbsp; </td>
             <td> &nbsp; &nbsp; &nbsp; </td>
@@ -161,7 +201,7 @@
             <td> &nbsp; &nbsp; &nbsp; </td>
             <td> &nbsp; &nbsp; &nbsp; </td>
         </tr>
-        <tr>
+        <tr class="bg">
             <td> &nbsp; &nbsp; &nbsp; </td>
             <td> &nbsp; &nbsp; &nbsp; </td>
             <td> &nbsp; &nbsp; &nbsp; </td>
@@ -175,7 +215,7 @@
             <td rowspan="2"></td>
             <td> &nbsp; &nbsp; &nbsp; </td>
         </tr>
-        <tr>
+        <tr class="bg">
             <td> &nbsp; &nbsp; &nbsp; </td>
             <td> &nbsp; &nbsp; &nbsp; </td>
             <td> &nbsp; &nbsp; &nbsp; </td>
@@ -200,5 +240,16 @@
     <a href="2-3-01.html"><img src="media/apple.jpg" width="100px" alt=""></a>
     <br>
     <a href="#make-list">리스트로 가기</a>
+
+    <h1>가상 클래스 셀렉터 확인</h1>
+    <hr>
+    <p>가</p>
+    <p>나</p>
+    <div>1</div>
+    <div>2</div>
+    <p>다</p>
+    <p>라</p>
+
+
 </body>
 </html>
