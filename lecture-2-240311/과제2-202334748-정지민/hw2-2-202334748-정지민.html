@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hw2-2</title>
+    <style>
+        .first-div {
+            border: 1px dashed grey;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: blue;
+        }
+
+        .first-div span {
+            color: green; 
+        }
+
+        .second-div {
+            background-color: purple;
+            color: white;
+            margin: 5px;
+        }
+
+        .second-div span {
+            font-weight: bold; 
+            color: yellow; 
+        }
+    </style>
+</head>
+<body>
+    <div class="first-div">
+        <!-- <p><span>3월 11일</span> 월요일 수업</p>
+        <p>html과 css와 자바스크립트를 배웠습니다.</p> -->
+        <span>3월 11일</span> 월요일 수업<br>
+        html과 css와 자바스크립트를 배웠습니다.
+    </div>
+    
+    <script>
+        // document.write('<div class="second-div">');
+        // document.write('<p>자바스크립트로 만들어준 태그입니다.</p>');
+        // document.write('<p>자바스크립트로 만들어준 <span>두번째</span> 태그입니다.</p>');
+        // document.write('</div>');
+        document.write('<div class="second-div">');
+        document.write('자바스크립트로 만들어준 태그입니다.<br>');
+        document.write('자바스크립트로 만들어준 <span>두번째</span> 태그입니다.');
+        document.write('</div>');
+    </script>
+</body>
+</html>
