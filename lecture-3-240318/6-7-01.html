@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>리터럴</title>
+  </head>
+  <body>
+    <h3>리터럴</h3>
+    <hr />
+    <script>
+    //   let oct = 015; // 015는 8진수. 10진수로 13
+      let oct = 0o15; // 0o15는 8진수로 나타낸다는 의미. 10진수로 13
+      let hex = 0x15; // 0x14는 16진수. 10진수로 21
+      let bina = 0b101; // 2진수
+      let condition = true; // True로 하면 안됨
+    //   document.write("8진수 015는 십진수로 " + oct + "<br>");
+    //   document.write("16진수 0x15는 십진수로 " + hex + "<br>");
+    //   document.write("condition은 " + condition + "<br>");
+    //   document.write("문자열 : 단일인용부호로도 표현" + "<br>");
+    //   document.write('그녀는 "누구세요"라고 했습니다.');
+
+      document.write("8진수 015는 십진수로 " + oct + "이고 " + oct.toString(8) + "로 쓴다. <br>");
+      document.write("16진수 0x15는 십진수로 " + hex + "이고 " + hex.toString(16) + "로 쓴다. <br>");
+      document.write("2진수 0b101는 십진수로 " + bina + "이고 " + bina.toString(2) + "이라고 쓴다. <br>");
+      document.write("condition은 " + condition + "<br>");
+      document.write("문자열 : 단일인용부호로도 표현" + "<br>");
+      document.write('그녀는 "누구세요"라고 했습니다.');
+    </script>
+  </body>
+</html>
