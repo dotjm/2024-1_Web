@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>2개의 &lt;iframe&gt;를 가집니다. 
+    </h3>
+    <hr>
+    <iframe src="iframe1.html" width="200" height="150" name="left"></iframe>
+    <iframe src="iframe2.html" width="200" height="100"></iframe>
+    <!-- srcdoc가 src보다 우선순위가 높음 -->
+    <iframe src="iframe2.html" srcdoc="<HTML><head></head><body>안녕하세요</body></HTML>" width="200" height="100"></iframe>
+    <br>
+    <iframe src="http://www.etnews.com" width="200" height="300"></iframe>
+</body>
+</html>
