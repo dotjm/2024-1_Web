@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>둥근 모서리 테두리</title>
+    <style>
+      p {
+        background: #90d000;
+        width: 300px;
+        padding: 20px;
+      }
+      #round0 {
+        border-radius: 0px 10px 30px; /* 숫자가 3개 있으면, 대각선의 것을 적용받음 */
+      }
+      #round1 {
+        border-radius: 50px;
+      }
+      #round2 {
+        border-radius: 0px 20px 40px 60px;
+      }
+      #round3 {
+        border-radius: 0px 20px 40px;
+      }
+      #round4 {
+        border-radius: 0px 20px;
+      }
+      #round5 {
+        border-radius: 50px;
+        border-style: dotted;
+      }
+
+      div#click-button {
+        margin: 5px;
+        background: orange;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        text-decoration: underline;
+        color: blue;
+        
+        border-radius: 17px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: gray;
+
+        width: 65px;
+        padding: 12px;
+      }
+
+      div#click-button2 {
+        margin: 5px;
+        background: orange;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        text-decoration: underline;
+        color: blue;
+        
+        border-radius: 17px;
+        border-width: 8px;
+        border-style: solid;
+        /* border-color: gray; */
+        border-color: white;
+
+        box-shadow: 3px 3px 3px 0px gray;
+
+
+        width: 65px;
+        padding: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>둥근 모서리 테두리</h3>
+    <hr />
+    <p id="round0">둥근 모서리</p>
+    <div id="click-button" href="#">Click</div>
+    <div id="click-button2" href="#">Click</div>
+    <p id="round1">반지름 50픽셀의 둥근 모서리</p>
+    <p id="round2">반지름 0, 20, 40, 60 둥근 모서리</p>
+    <p id="round3">반지름 0, 20, 40, 20 둥근 모서리</p>
+    <p id="round4">반지름 0, 20, 0, 20 둥근 모서리</p>
+    <p id="round5">반지름 50의 둥근 점선 모서리</p>
+  </body>
+</html>

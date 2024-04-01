@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>자동 요소 생성기</title>
+    <script>
+        function makeComponent(content) {
+            return "<"+this.elem+">" + content + "</"+this.elem+">";
+        }
+        let mnc = new Object();
+        mnc.elem = "div";
+        mnc.makeComponent = makeComponent;
+
+        // 리터럴 표기법
+
+        let mnc2 = {
+            elem : "div",
+
+            makeComponent : function (content){
+                return "<"+this.elem+">" + content + "</"+this.elem+">";
+            }
+        };
+
+        // 프로토타입 Student 작성
+        function MakeNewComponent(elem) {
+            this.elem = elem; 
+            
+            this.makeComponent = function (content) { 
+                return "<"+this.elem+">" + content + "</"+this.elem+">";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>MakeNewComponent - 프로토 타입</h3>
+    <hr>
+    <script>
+        document.write(mnc.makeComponent("나는 div태그이다. "));
+
+        document.write(mnc2.makeComponent("나는 리터럴 표기법으로 만든 div태그이다. "));
+
+        mnc3 = new MakeNewComponent("div");
+        document.write(mnc3.makeComponent("나는 함수 형식으로 만든 div태그이다. "));
+
+        newspan = new MakeNewComponent("span");
+        document.write(newspan.makeComponent("나는 함수 형식으로 만든 span태그이다. "));
+    </script>
+</body>
+</html>
+<!-- elem 속성이 있다. 
+makeComponent 메소드가 있다. 
+elem = "div";
+makeComponet("나는 div태그이다. ")
+
+
+<div>나는 div태그이다. </div> -->
