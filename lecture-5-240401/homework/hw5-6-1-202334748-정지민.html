@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      img.bye-image {
+        height: 200px;
+        margin: 0px 20px;
+      }
+
+      h1 {
+        margin: 10px 0px;
+        padding-top: 20px;
+      }
+
+      span {
+        font-weight: bold;
+        color: #4397E0;
+      }
+
+      .description {
+        padding-bottom: 20px;
+      }
+
+      div.button {
+        display: inline-block; /* inline-block 요소로 설정 */
+        width: 115px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 2px;
+
+        text-align: center;
+        vertical-align: middle; 
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .button > a {
+        text-decoration: none;
+      }
+
+      div.full-button {
+        background-color: #3D8AD9;
+        color: white;
+      }
+
+      div.lined-button {
+        border: 1px solid #55A1E0;
+        color: #55A1E0;
+      }
+    </style>
+
+    <script>
+      function makeComponent(content) {
+          return `<table>
+                    <tr>
+                      <td rowspan="3">
+                        <img class="bye-image" src="` + this.imgsrc + `" alt="">
+                      </td>
+                      <td>
+                        <h1>
+                          <span>자동로그아웃</span>안내
+                        </h1>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="description">
+                        고객님의 안전한 금융거래를 위해 로그인 후 약 10분 동안 <br>
+                        서비스 이용이없어 <span>자동 로그아웃</span> 되었습니다.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#" style="margin-right: 5px;"><div class="button full-button">다시 로그인</div></a>
+                        <a href="#"> <div class="button lined-button">초기화면 이동</div></a>
+                        
+                      
+                      </td>
+                    </tr>
+                  </table>`;
+      }
+      let mnc = new Object();
+      mnc.imgsrc = "media/bye.png";
+      mnc.makeComponent = makeComponent;
+
+      
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write(mnc.makeComponent());
+  </script>
+  </body>
+</html>
