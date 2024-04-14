@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>positon 연습</title>
+    <style>
+      div {
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+      }
+      #first {
+        border: 2px solid red;
+        width: 650px;
+        height: 300px;
+        position: relative;
+        top: 30px;
+        left: 30px;
+        
+        
+      }
+      #second {
+        border: 2px solid blue;
+        position : absolute; 
+        top: 0px;
+        left: 0px;
+      }
+      #third {
+        border: 2px solid green;
+        position : absolute; 
+        top: 0px;
+        left:200px;
+      }
+      #fourth {
+        border: 2px solid rgb(198, 13, 183);
+        position : absolute; 
+        top: 0px;
+        left: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first">
+      <!-- first -->
+      <div id="second">second</div>
+      <div id="third">third</div>
+      <div id="fourth">fourth</div>
+    </div>
+  </body>
+</html>

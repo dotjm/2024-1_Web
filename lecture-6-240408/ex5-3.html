@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>절대 배치</title>
+    <style>
+      div {
+        display: inline-block;
+        position: absolute; /* 절대 배치*/
+        border: 1px solid lightgray;
+      }
+      div > p {
+        display: inline-block; /* div의 자식 p */
+        position: absolute; /* 절대 배치*/
+        height: 20px;
+        width: 15px;
+        background: lightgray;
+      }
+      #fixed {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        padding: 5px;
+        background: red;
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Merry Christmas!</h3>
+    <hr />
+    <p>예수님이 탄생하셨습니다.</p>
+    <div>
+      <img
+        src="media/christmastree.png"
+        width="200"
+        height="200"
+        alt="크리스마스 트리"
+      />
+      <p style="left: 50px; top: 30px">M</p>
+      <p style="left: 100px; top: 0px">E</p>
+      <p style="left: 100px; top: 80px">R</p>
+      <p style="left: 150px; top: 110px">R</p>
+      <p style="left: 30px; top: 130px">Y</p>
+      <div id="fixed">예수님이 탄생하셨습니다. </div>
+      
+    </div>
+    <div style="margin-top: 200px;">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit hic excepturi tempora amet id sed magnam suscipit delectus veniam consequuntur molestias, earum itaque natus aliquid. Repellat laudantium iure quas voluptas!
+        </p>
+    </div>
+    
+  </body>
+</html>

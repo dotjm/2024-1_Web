@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        span {
+            /* display: block; */
+            /* display: inline-block; */
+            display: inline;
+            width: 100px; /* inline에서는 안먹음 */
+            height: 30px; /* inline에서는 안먹음 */
+
+            border: 2px solid blue;
+        }
+
+        #s1 {
+            display: none;  /* 안보이게됨 (영역조차 없어짐) */
+        }
+
+        #s1 {
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <span id="s1">block span</span>과 <span id="s2">block span</span> 입니다. 
+    </div>
+    <div style="background: orange; border: 1px solid black;">
+        <div style="display: inline; border: 1px solid black;">inline div 1</div>
+        <div style="display: inline; border: 1px solid black;">inline div 2</div>
+        <div style="display: inline; border: 1px solid black;">inline div 3</div>
+        <div style="display: inline; border: 1px solid black;">inline div 4</div>
+    </div>
+</body>
+</html>

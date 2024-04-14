@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>relative 배치</title>
+    <style>
+      div {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border: 1px solid lightgray;
+        text-align: center;
+        color: white;
+        background: red;
+        line-height: 50px;
+      }
+      /* #down:hover {
+        position: relative;
+        left: 20px;
+        top: 20px;
+        background: green;
+      }
+      #up:hover {
+        position: relative;
+        right: 20px;
+        bottom: 20px;
+        background: green;
+      }
+      #a:hover {
+        position: relative;
+        top: 30px;
+        color: black;
+        background: yellow;
+      } */
+
+      /* 계단 모양 만들기 */
+      #down {
+        position: relative;
+        top: 50px;
+      }
+      #a {
+        position: relative;
+        top: 100px;
+      }
+      #n {
+        position: relative;
+        top: 150px;
+      }
+      #up {
+        position: relative;
+        top: 200px;
+      }
+      #s {
+        position: relative;
+        top: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>상대 배치, relative</h3>
+    h와 k 글자에 마우스를 올려 보세요
+    <hr />
+    <div id="T">T</div>
+    <div id="down">h</div>
+    <div id="a">a</div>
+    <div id="n">n</div>
+    <div id="up">k</div>
+    <div id="s">s</div>
+  </body>
+</html>
