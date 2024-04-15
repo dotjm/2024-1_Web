@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      var textSize = 1;
+      function change() {
+        let span = document.getElementById("mySpan");
+        this.textSize = this.textSize * 1.5;
+        span.style.color = "green"; // 글자 색 green
+        span.style.fontSize = this.textSize + "em";
+      }
+    </script>
+  </head>
+  <body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr />
+    <p style="color: blue">
+      사과는
+      <span id="mySpan" style="color: red">빨간색</span>
+      입니다.
+    </p>
+
+    <input type="button" value="글자 크게" onclick="change()" />
+  </body>
+</html>

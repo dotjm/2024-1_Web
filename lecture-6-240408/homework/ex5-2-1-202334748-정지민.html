@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .day-text {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+
+      border-radius: 50px;
+      border: 3px solid black;
+
+
+      color: white;
+    }
+
+    .day-text:nth-child(even) {
+      position: relative;
+      top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h3>상대 배치, relative</h3>
+  무지개색 요일
+  <hr>
+  <div class="day-text" style="background-color: red;">
+    월
+  </div>
+  <div class="day-text" style="background-color: orange;">
+    화
+  </div>
+  <div class="day-text" style="background-color: yellow;">
+    수
+  </div>
+  <div class="day-text" style="background-color: green;">
+    목
+  </div>
+  <div class="day-text" style="background-color: DodgerBlue;">
+    금
+  </div>
+  <div class="day-text" style="background-color: blue;">
+    토
+  </div>
+  <div class="day-text" style="background-color: purple;">
+    일
+  </div>
+</body>
+</html>
