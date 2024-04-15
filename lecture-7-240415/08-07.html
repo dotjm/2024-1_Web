@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function clickf() {
+            let p = document.getElementById("firstId");
+            let div = document.getElementById("firstDiv");
+            alert(p.innerHTML);
+
+            div.innerHTML = p.innerHTML
+            // alert(p.innerText);
+        }
+    </script>
+</head>
+<body>
+    <p id="firstId" onclick="clickf()">여기를 <span>클릭하세요</span></p>
+    <div id="firstDiv"></div>
+</body>
+</html>

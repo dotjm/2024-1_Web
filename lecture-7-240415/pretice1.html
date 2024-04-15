@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #canvas {
+            margin: 10px;
+        }
+        .square {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+
+            border: 2px solid green;
+
+            text-align: center;
+        }
+    </style>
+    <script>
+        var x = 0;
+        function makeSquare() {
+            let canvas = document.getElementById("canvas");
+
+            canvas.innerHTML = "<div id='square' class='square' style='margin-left: " + x + "px;'>사각형</div>"
+        }
+
+        function maveToRightOld() {
+            let canvas = document.getElementById("canvas");
+
+            x = x + 50;
+
+            canvas.innerHTML = "<div id='square' class='square' style='margin-left: " + x + "px;'>사각형</div>"
+        }
+
+        function maveToRight() {
+            let square = document.getElementById("square");
+
+            x = x + 50;
+
+            square.style.marginLeft =  x + "px";
+        }
+
+
+        
+    </script>
+</head>
+<body>
+    <input type="button" value="사각형 만들기" onclick="makeSquare()" />
+    <input type="button" value="오른쪽으로 움직이기" onclick="maveToRight()" />
+    <div id="canvas">
+
+    </div>
+</body>
+</html>

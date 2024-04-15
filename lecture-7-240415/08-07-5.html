@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function exerF() {
+            let idDiv = document.getElementById("d4");
+            let cDiv = document.getElementsByClassName("d")[0];
+            let tH3 = document.getElementsByTagName("h3")[0];
+            alert(tH3.innerHTML);
+        }
+    </script>
+</head>
+<body>
+    <h3>document 메소드 연습</h3>
+    <hr>
+    <div> div 1 </div>
+    <div class="d"> div 2 </div>
+    <div class="d"> div 3 </div>
+    <div id="d4"> div 4 </div>
+    <input type="button" value="연습" onclick="exerF()">
+</body>
+</html>
