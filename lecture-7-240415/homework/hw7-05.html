@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            margin: 0;
+            
+            background-color: #EDE7F6;
+        }
+
+        header {
+            margin: 0;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+
+            background-color: #F7F3FC;
+        }
+
+        header > h3 {
+            text-align: center;
+            margin: 0;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+
+            overflow: scroll;
+        }
+
+        .container { 
+            max-width: 960px;
+            margin: 10px auto;
+            padding: 10px 5px;
+        }
+
+        .main-left, .main-right{
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+
+            margin: 0;
+            padding: 10px;
+        }
+
+        .main-left {
+            float: left;
+
+            padding-right: 120px;
+        }
+
+        .main-right {
+            float: right;
+        }
+        
+        .badge-text {
+            color: #BA54DE;
+            font-weight: bold;
+        }
+
+        .title-text {
+            color: #F0B6FF;
+        }
+
+        button {
+            width: 105px;
+            height: 45px;
+
+            margin: 10px 5px;
+
+            border-radius: 5px;
+            border: 1px solid #B39DDB;
+            background-color: #B39DDB;
+        }
+
+        .main-img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>[miniProject] html/css 연습 - 다른 웹사이트 따라해보기</h3>
+    </header>
+    <main class="container">
+        <div class="main-left">
+            <p class="badge-text">WELCOME LAB</p>
+            <h1 class="title-text">
+                Eu do exercitation <br>
+                reprehenderit culpa do <br>
+                occaecat fugiat nulla.<br>
+            </h1>
+            <p>Ut incididunt aliqua culpa enim. Velit aliqua dolor cupidatat veniam minim excepteur magna dolor incididunt ea deserunt ex nulla. Exercitation esse quis ea velit ullamco esse deserunt ut dolore. Sunt quis irure velit cupidatat mollit ut culpa reprehenderit duis.</p>
+            <div>
+                <button>Examplore</button>
+                <button>Watch Video</button>
+            </div>
+        </div>
+        <div class="main-right">
+            <img class="main-img" src="media/image.png" alt="" width="50%">
+        </div>
+    </main>
+</body>
+</html>
