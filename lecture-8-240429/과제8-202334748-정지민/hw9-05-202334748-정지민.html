@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>onclick</title>
+    <style>
+        .div-button {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+
+            text-align: center;
+
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+      function calculate() {
+        let exp = document.getElementById("exp");
+        let result = document.getElementById("result");
+        result.value = eval(exp.value);
+      }
+
+      function reset() {
+        let exp = document.getElementById("exp");
+        let result = document.getElementById("result");
+        exp.value = "";
+        result.value = "";
+      }
+
+      function repregentChar(obj) {
+        let exp = document.getElementById("exp");
+        exp.value = exp.value + obj.innerHTML;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>onclick, 계산기 만들기</h3>
+    <hr />
+    계산하고자 하는 수식을 입력하고 계산 버튼을 눌러봐요.’
+    <br /><br />
+    <form>
+      식 <input type="text" id="exp" value="" /><br />
+      값 <input type="text" id="result" />
+      <input type="button" value=" 계산" onclick="calculate()" />
+      <br>
+      <br>
+      <div id="n1" class="div-button" onclick="repregentChar(this)">1</div>
+      <div id="n2" class="div-button" onclick="repregentChar(this)">2</div>
+      <div id="n3" class="div-button" onclick="repregentChar(this)">3</div>
+      <div id="n-plus" class="div-button" onclick="repregentChar(this)">+</div>
+      <br>
+      <div id="n4" class="div-button" onclick="repregentChar(this)">4</div>
+      <div id="n5" class="div-button" onclick="repregentChar(this)">5</div>
+      <div id="n6" class="div-button" onclick="repregentChar(this)">6</div>
+      <div id="n-minus" class="div-button" onclick="repregentChar(this)">-</div>
+      <br>
+      <div id="n7" class="div-button" onclick="repregentChar(this)">7</div>
+      <div id="n8" class="div-button" onclick="repregentChar(this)">8</div>
+      <div id="n9" class="div-button" onclick="repregentChar(this)">9</div>
+      <div id="n-minus" class="div-button" onclick="repregentChar(this)">*</div>
+      <br>
+      <div id="n0" class="div-button" onclick="repregentChar(this)">0</div>
+      <div id="n-divide" class="div-button" onclick="repregentChar(this)">/</div>
+      <div id="n-dot" class="div-button" onclick="repregentChar(this)">.</div>
+      <div id="n-reset" class="div-button" onclick="reset()">C</div>
+      <br>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>문서의 동적 구성</title>
+    <script>
+      let index = 0;
+      function createDIV() {
+        index += 1;
+
+        let obj = document.getElementById("parent");
+        let newDIV = document.createElement("div");
+        newDIV.innerHTML = "생성되었어요" + index;
+        newDIV.setAttribute("id", "myDiv");
+        newDIV.style.border = "3px solid green";
+        // newDIV.style.borderRadius = "10px";
+        newDIV.style.width = "110px";
+        newDIV.style.height = "25px";
+        newDIV.style.lineHeight = "25px";
+        newDIV.style.textAlign = "center";
+        newDIV.style.margin = "10px";
+        // newDIV.onclick = function () {
+        //   let p = this.parentElement; // 부모 HTML 태그 요소
+        //   p.removeChild(this); // 자신을 부모로부터 제거
+        // };
+        obj.appendChild(newDIV);
+      }
+
+      function deleteDIV() {
+        let obj = document.getElementById("parent");
+        let objChild = obj.getElementsByTagName("div");
+        if (objChild.length >= 1) {
+            // console.log(objChild[objChild.length-1]);
+            obj.removeChild(objChild[objChild.length-1]); // 자신을 부모로부터 제거
+        }
+        
+      }
+    </script>
+  </head>
+  <body id="parent">
+    <button onclick="createDIV()">태그 생성</button>
+    <button onclick="deleteDIV()">태그 삭제</button>
+    <p></p>
+    <p></p>
+  </body>
+</html>
