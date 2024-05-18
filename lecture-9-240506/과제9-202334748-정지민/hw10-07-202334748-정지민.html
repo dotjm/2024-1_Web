@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>전체 선택 체크박스 연습</title>
+    <script>
+        function changeCheckAll(myThis) {
+            items = document.getElementsByClassName('selectItem');
+            for (item of items) {
+                item.checked = myThis.checked;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>전체 선택 체크박스 연습</h1>
+    <hr>
+    <h4>내가 앞으로 하고 싶은 일을 선택하시오.</h4>
+    <label>
+        전체선택 <input type="checkbox" id="selectAll" onchange="changeCheckAll(this)" />
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" class="selectItem" /> 여행
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" class="selectItem" /> 아르바이트
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" class="selectItem" /> 공부
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" class="selectItem" /> 데이트
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" class="selectItem" /> 영화보기
+    </label>
+    <br>
+</body>
+</html>
