@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Clock from "./react03/Clock";
+import CommentList from "./react04/CommentList";
+
 setInterval(() => {
   ReactDOM.render(
     <React.StrictMode>
       <Clock />
+      <CommentList />
     </React.StrictMode>,
     document.getElementById("root")
   );
