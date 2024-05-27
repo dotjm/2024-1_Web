@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(232, 235, 238);
+}
+td {
+  width: 14px;
+  height: 14px;
+}
+#blockField {
+  margin-left: 20px;
+  margin-top: 20px;
+  float: left;
+}
