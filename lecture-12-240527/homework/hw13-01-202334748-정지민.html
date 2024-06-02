@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+       <style>
+          
+          #container { width : 500px;
+                       height : 60px;
+                    padding: 0px;}
+
+          .inB { width : 50px;
+                height : 50px;
+                display: inline-block;
+                float: left;
+                margin : 2px;    }
+         
+          #iColor {
+
+              width : 50px;
+              height : 50px;
+              border : 1px solid gray;
+              
+          }
+
+          #position {
+              width : 120px;
+              height : 50px;
+              border : 1px solid gray;
+              font-size: 10px;
+              text-align: center;
+              line-height : 50px;
+              
+          }
+
+          #drawBoard {
+              width : 500px;
+              height : 500px;
+              border : 1px solid gray;
+              
+          }
+       </style>
+       <script>
+          function decisionColor(div) {
+            let iColor = document.getElementById("iColor");
+            iColor.style.backgroundColor = div.style.backgroundColor;
+          }
+
+          function decisionP(input) {
+            let iColor = document.getElementById("iColor");
+            iColor.style.backgroundColor = input.value;
+          }
+
+          function updatePosition(event) {
+            let positionDiv = document.getElementById("position");
+            let x = event.clientX;
+            let y = event.clientY;
+            positionDiv.innerText = 'x: ' + x + ', y: ' + y;
+          }
+           
+       </script>
+    </head>
+    <body >
+      <div id="container">
+        <div class = "inB" id="div1"  style="background-color: blue" onclick ="decisionColor(this)"></div>
+        <div class = "inB" id="div2"  style="background-color: yellow" onclick ="decisionColor(this)"></div>
+        <div class = "inB" id="div3"  style="background-color: teal" onclick="decisionColor(this)"></div>
+        <div class = "inB" id="div4"  style="background-color: coral" onclick="decisionColor(this)"></div>
+        <input class = "inB"  type="color" id="colorP" value="#00ff00" onchange="decisionP(this)">
+        <div class = "inB" id="iColor" ></div>
+        <div class = "inB" id="position" ></div>
+      </div>
+        <br>
+      <div id="drawBoard" onmousemove="updatePosition(event)"></div>
+    </body>
