@@ -10,6 +10,8 @@ import App from "./App";
 import Memoexam from "./react06/Memoexam";
 import MemoExam2 from "./react06/MemoExam2";
 import MemoExam3 from "./react06/MemoExam3";
+import Accommodate from "./react06/Accommodate";
+import LoginControl from "./react07/LoginControl";
 // import MemoExam3Old from "./react06/MemoExam3Old";
 
 
@@ -24,7 +26,9 @@ root.render(
     <Example2 />
     <Memoexam />
     <MemoExam2 /> */}
-    <MemoExam3 />
+    {/* <MemoExam3 /> */}
+    {/* <Accommodate /> */}
+    <LoginControl />
   </React.StrictMode>
   
 );
