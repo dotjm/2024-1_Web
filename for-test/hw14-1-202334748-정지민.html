@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>원 그래프</title>
+</head>
+<body>
+    <h3>학점 별로 학생 수를 입력하면 파이 차트로 비율 그리기</h3>
+    <hr>
+    A : &nbsp; <input class="data" type="number" value="0">명&nbsp;&nbsp; 
+    B : &nbsp; <input class="data" type="number" value="0">명&nbsp;&nbsp;
+    C : &nbsp; <input class="data" type="number" value="0">명 <br>
+    D : &nbsp; <input class="data" type="number" value="0">명&nbsp;&nbsp;
+    F : &nbsp; <input class="data" type="number" value="0">명&nbsp;&nbsp;
+    <button onclick="draw()">차트그리기</button><br>
+    <canvas id="graph" width="700" height="500" style="background-color: aliceblue;"></canvas>
+
+    <script>
+        let data = document.getElementsByClassName("data");
+        let colors = ["blue", "green", "brown", "magenta", "red"];
+        let grads = ["A", "B", "C", "D", "F"];
+        let canvas = document.getElementById("graph");
+        let context = canvas.getContext("2d");
+        let total = 0;
+
+        function draw() {
+            total = 0;
+            for (let i = 0; i < data.length; i++) {
+                total += parseInt(data[i].value);
+            }
+
+            let per = [0, 0, 0, 0, 0];
+
+            for (let j = 0; j < data.length; j++) {
+                per[j] = (parseInt(data[j].value) / total) * 100;
+            }
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            let startAngle = 0;
+            for (let j = 0; j < data.length; j++) {
+                let sliceAngle = (2 * Math.PI * (parseInt(data[j].value) / total));
+
+                context.fillStyle = colors[j];
+                context.beginPath();
+                context.moveTo(350, 250); // 중심 좌표
+                context.arc(350, 250, 150, startAngle, startAngle + sliceAngle);
+                context.closePath();
+                context.fill();
+
+                startAngle += sliceAngle;
+            }
+
+            for (let j = 0; j < data.length; j++) {
+                context.font = "20px gothic";
+                context.fillStyle = colors[j];
+                context.fillText(grads[j] + "학점 | " + per[j].toFixed(1) + "%", 20, 20 * j + 20);
+            }
+        }
+    </script>
+</body>
+</html>
